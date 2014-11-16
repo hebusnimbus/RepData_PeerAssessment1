@@ -412,7 +412,7 @@ median(data$count)
 
 <h3>New factor variable</h3>
 
-<p>A new factor variable is added in the data frame to indicate if an observation happened on a weekday or on the weekend (the whole column is first iniitalized to <code>weekday</code>, and weekend days are overwritten with <code>weekend</code>:</p>
+<p>A new factor variable is added in the data frame to indicate if an observation happened on a weekday or on the weekend (the whole column is first initialized to <code>weekday</code>, and weekend days are overwritten with <code>weekend</code>):</p>
 
 <pre><code class="r">data.clean$typeOfDay &lt;- &quot;weekday&quot;
 data.clean[weekdays(as.Date(data.clean$date))==&quot;Saturday&quot;,]$typeOfDay &lt;- &quot;weekend&quot;

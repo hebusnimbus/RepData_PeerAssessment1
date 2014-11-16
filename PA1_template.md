@@ -244,7 +244,7 @@ Even though the histogram changed quite a bit (frequency wise, not shape wise), 
 
 ### New factor variable
 
-A new factor variable is added in the data frame to indicate if an observation happened on a weekday or on the weekend (the whole column is first iniitalized to `weekday`, and weekend days are overwritten with `weekend`:
+A new factor variable is added in the data frame to indicate if an observation happened on a weekday or on the weekend (the whole column is first initialized to `weekday`, and weekend days are overwritten with `weekend`):
 
 ```r
 data.clean$typeOfDay <- "weekday"
