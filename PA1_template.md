@@ -46,6 +46,14 @@ summary(data.raw)
 ```
 
 
+Here we have chosen to not pre-process the raw data any further.  One could perhaps remove the rows with missing values (`NA`), but since at this point we are not sure about what type of analysis will be performed, we decided to leave it as is.  One way to remove the missing values is as follow:
+
+```r
+data <- data.raw[complete.cases(data.raw),]
+```
+
+Therefore, further analysis  has to be a little more cautious, as a lot of functions will return `NA` if any of the values they operate on are missing (`mean` is an example of such function).
+
 
 ## What is mean total number of steps taken per day?
 
@@ -73,7 +81,7 @@ hist(
 )
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 
 ### Mean and median total number of steps taken per day
@@ -121,7 +129,7 @@ plot(
 )
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
 
 ### 5-minute interval with the most steps
@@ -211,7 +219,7 @@ hist(
 )
 ```
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
+![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png) 
 
 ```r
 mean(data$count)
@@ -269,4 +277,4 @@ xyplot(
 )
 ```
 
-![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17-1.png) 
+![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18-1.png) 

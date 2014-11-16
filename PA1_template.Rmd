@@ -34,6 +34,13 @@ summary(data.raw)
 ```
 
 
+Here we have chosen to not pre-process the raw data any further.  One could perhaps remove the rows with missing values (`NA`), but since at this point we are not sure about what type of analysis will be performed, we decided to leave it as is.  One way to remove the missing values is as follow:
+```{r}
+data <- data.raw[complete.cases(data.raw),]
+```
+
+Therefore, further analysis  has to be a little more cautious, as a lot of functions will return `NA` if any of the values they operate on are missing (`mean` is an example of such function).
+
 
 ## What is mean total number of steps taken per day?
 
